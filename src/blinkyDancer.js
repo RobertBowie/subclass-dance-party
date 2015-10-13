@@ -10,10 +10,7 @@ BlinkyDancer.prototype = Object.create(Dancer.prototype);
 BlinkyDancer.prototype.constructor = BlinkyDancer;
 BlinkyDancer.prototype.oldStep = Dancer.prototype.step;
 BlinkyDancer.prototype.step = function(timeBetweenSteps) {
-  //this.oldStep = this.step;
   this.oldStep(this.timeBetweenSteps);
-  // debugger;
-  //setTimeOut(this, timeBetweenSteps);
   this.$node.toggle();
 };
 
