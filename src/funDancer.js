@@ -8,8 +8,8 @@ FunDancer.prototype.constructor = FunDancer;
 FunDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
   var randomNum = Math.random() * ($("body").height() - 100);
-  this.$node.animate({'left': '+=' + randomNum}, 300);
-  this.$node.animate({'top': '+=' + randomNum}, 300);
-  this.$node.animate({'top': '-=' + randomNum}, 300);
-  this.$node.animate({'left': '-=' + randomNum}, 300);
+  this.$node.animate({'left': '+=' + this.left * 0.75}, 300);
+  this.$node.animate({'top': '+=' + this.top * 0.75}, 300);
+  this.$node.animate({'top': '-=' + this.top * 0.75}, 300);
+  this.$node.animate({'left': '-=' + this.left * 0.75}, 300);
 };

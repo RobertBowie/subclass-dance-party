@@ -8,6 +8,6 @@ BouncyDancer.prototype.constructor = BouncyDancer;
 BouncyDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
   var randomNum = Math.random() * ($("body").height() - 100);
-  this.$node.animate({'top': '+=' + randomNum}, 300);
-  this.$node.animate({'top': '-=' + randomNum}, 300);
+  this.$node.animate({'top': '+=' + this.top}, 300);
+  this.$node.animate({'top': '-=' + this.top}, 300);
 };
